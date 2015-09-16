@@ -1,4 +1,4 @@
-Bacteria babycircle;
+Bacteria circle;
 //declare bacteria variables here  
 int myX = 300;
 int myY = 300;
@@ -6,38 +6,39 @@ int myY = 300;
 void setup(){     
   background(0);
   size(600, 600);
-  Bacteria babycircle = new Bacteria(myX, myY);
+  circle = new Bacteria(300,300);
 }
   //initialize bacteria variables here
 
 void draw()   
 {    
   //move and show the bacteria
-  //Bacteria babycircle = new Bacteria(myX, myY);
-  babycircle.move();
-  babycircle.show();
-  
+  //Bacteria circle = new Bacteria(myX, myY);
+
+    circle.show();
+    circle.move();
+    redraw();
+  //System.out.println();
 }  
 
 class Bacteria    
 {     
-  int numBacteria, myX, myY;
+  int myX, myY;
 
   Bacteria(int x, int y) {
 
     myX = x;
     myY = y;
-    numBacteria = 200;
+ //   bacteriaColor = 200;
   } 
   void show() {
-    noStroke();
     fill(255, 0, 0);
     ellipse(myX, myY, 30, 30);
   }
   void move() {
 
-    myX = x + (int)(Math.random()*10)-1; 
-    myY = x + (int)(Math.random()*10)-1;
+    myX = myX + (int)(Math.random()*3)-1; 
+    myY = myX + (int)(Math.random()*3)-1;
   }
 
 
