@@ -3,12 +3,13 @@
 //declare bacteria variables here  
 int myX = 300;
 int myY = 300;
+int bacteriaColor = 0;
 Bacteria [] squad;
 
 void setup() {     
   background(0);
   size(600, 600);
-  squad = new Bacteria[300];
+  squad = new Bacteria[50];
 //  circle = new Bacteria(300, 300);
 for(int i = 0; i < squad.length; i++){
   
@@ -24,11 +25,13 @@ void draw()
 
 //  circle.show();
   //circle.move();
-
+  fill(0,0,0,10);
+  rect(0,0,600,600,90);
 for (int i = 0; i < squad.length; i++) {
 squad[i].move();
 squad[i].show();
   }
+
 }
 
 //  redraw();
@@ -42,11 +45,11 @@ class Bacteria
 
     myX = x;
     myY = y;
-    //   bacteriaColor = 200;
+    bacteriaColor = (int)(Math.random()*255)-1;
   } 
   void show() {
-    //background(9);
-    fill(255, 0, 0);
+    noStroke();
+    fill((int)(Math.random()*255)+90,(int)(Math.random()*255)+90,(int)(Math.random()*255)-90);
     ellipse(myX, myY, 30, 30);
   }
   void move() {
@@ -54,6 +57,12 @@ class Bacteria
     myX = myX + (int)(Math.random()*5)-2; 
     myY = myY + (int)(Math.random()*5)-2;
     
+  }
+  
+  void follow(){
+  //Add some if statements or the stimulus.
+  
+  
   }
 
 
