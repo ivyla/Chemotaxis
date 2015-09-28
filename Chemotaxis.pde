@@ -118,21 +118,20 @@ class Bacteria
   void mousePressed() {
    
 
-   shapepicker = (int)(Math.random()*6)+1;
-   if(shapepicker == 1){
+//   shapepicker = (int)(Math.random()*6)+1;
+//   if(shapepicker == 1){
        fill((int)(Math.random()*256)+30,(int)(Math.random()*256)+100,(int)(Math.random()*256)+30);
-    ellipse(mouseX, mouseY, (int)(Math.random()*500)+50,(int)(Math.random()*200)+30);
-   }  if(shapepicker == 2){
-       fill((int)(Math.random()*256)+30,(int)(Math.random()*256)+100,(int)(Math.random()*256)+30);
-    rect(mouseX, mouseY, (int)(Math.random()*200)+50,(int)(Math.random()*200)+30);
-   }  if(shapepicker == 3){
-   fill((int)(Math.random()*256)+30,(int)(Math.random()*256)+100,(int)(Math.random()*256)+30);
- //   image(z, mouseX, mouseY,200,200);
+    ellipse(mouseX, mouseY, (int)(Math.random()*500)+100,(int)(Math.random()*500)+50);
+//   }  if(shapepicker == 2){
+//       fill((int)(Math.random()*256)+30,(int)(Math.random()*256)+100,(int)(Math.random()*256)+30);
+//    rect(mouseX, mouseY, (int)(Math.random()*200)+50,(int)(Math.random()*200)+30);
+//   }  if(shapepicker == 3){
+//   fill((int)(Math.random()*256)+30,(int)(Math.random()*256)+100,(int)(Math.random()*256)+30);
+// //   image(z, mouseX, mouseY,200,200);
    
  }
    
     
 
     //Add some if statements or the stimulus.
-  }
-
+  
